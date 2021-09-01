@@ -26,7 +26,7 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 
 PM_START_TEXT = """
-**Hello {}, My Name is {}!** 
+**Hello {https://telegra.ph/file/eb183a86b5fc974b56d99.jpg}, My Name is {VALT AOI}!** 
 I am an **SUPERB**  group management bot.
 You can find the list of available commands with /help.
 
@@ -34,7 +34,7 @@ You can find the list of available commands with /help.
 
 HELP_STRINGS = """
 
-Hello! my name *{}*.
+Hello! my name *{VALT AOI}*.
 
 *Main* commands available:
  - /start: start the bot
@@ -45,7 +45,7 @@ Hello! my name *{}*.
    - in a group: will redirect you to pm, with all that chat's settings.
 
 
-{}
+{VALT AOI}
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
@@ -141,16 +141,16 @@ def start(bot: Bot, update: Update, args: List[str]):
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🤝HELP🤝",
                                                                        callback_data="help_back".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="🧑‍💻My Creator🧑‍💻",
-                                                                       url="t.me/teamishere")],
+                                                                                   InlineKeyboardButton(text="FUN CHAT",
+                                                                       url="https://t.me/CrimsonDragon")],
                                                                                    [InlineKeyboardButton(text="ADD GRAND OFFICIAL TO YOUR GROUP",
-                                                                       url="t.me/{}?startgroup=true".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="Source Code",
-                                                                       url="https://github.com/legendx22/GRANDROBOT")
+                                                                       url="http://t.me/redeyetheevilbot?startgroup=true".format(bot.username)),
+                                                                                   InlineKeyboardButton(text="uptade channel ",
+                                                                       url="https://t.me/Botcreatersss")
                                                                                  ]]))
 
     else:
-        update.effective_message.reply_text("Yuss, I am Already ONline")
+        update.effective_message.reply_text("Valt Aoi, I am Already ONline")
 
 
 def send_start(bot, update):
@@ -252,7 +252,7 @@ def get_help(bot: Bot, update: Update):
         update.effective_message.reply_text("Contact me in Direct Message to get the help.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="HELP",
-                                                                       url="t.me/{}?start=help".format(
+                                                                       url="http://t.me/redeyetheevilbot?start=help".format(
                                                                            bot.username))]]))
         return
 
